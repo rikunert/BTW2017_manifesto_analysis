@@ -25,14 +25,14 @@ readManifesto = function(manifesto_address){
 #######################################################################
 #data loading
 
-wd = 'C:\\Users\\Richard\\Desktop\\R\\HU_text_classification\\Wahlprogramme_2017\\cleaned_manifestos'
+wd = 'https://raw.githubusercontent.com/rikunert/BTW2017_manifesto_analysis/master/cleaned_manifestos'
 
-afd = readManifesto(paste(wd, "afd_cleaned.txt", sep = '\\'))
-cdu = readManifesto(paste(wd, "cdu_cleaned.txt", sep = '\\'))
-die = readManifesto(paste(wd, "die_cleaned.txt", sep = '\\'))
-fdp = readManifesto(paste(wd, "fdp_cleaned_ANSI.txt", sep = '\\'))
-gru = readManifesto(paste(wd, "gru_cleaned_ANSI.txt", sep = '\\'))
-spd = readManifesto(paste(wd, "spd_cleaned.txt", sep = '\\'))
+afd = readManifesto(paste(wd, "afd_cleaned.txt", sep = '/'))
+cdu = readManifesto(paste(wd, "cdu_cleaned.txt", sep = '/'))
+die = readManifesto(paste(wd, "die_cleaned.txt", sep = '/'))
+fdp = readManifesto(paste(wd, "fdp_cleaned_ANSI.txt", sep = '/'))
+gru = readManifesto(paste(wd, "gru_cleaned_ANSI.txt", sep = '/'))
+spd = readManifesto(paste(wd, "spd_cleaned.txt", sep = '/'))
 
 #remove too short paragraphs and put it all together
 minimal_paragraph_length = 12#defined in words
