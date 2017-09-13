@@ -71,14 +71,14 @@ corp <- TermDocumentMatrix(corp, control = list(removePunctuation = TRUE,
 
 td.mat <- as.matrix(corp)
 
-td.mat.lsa <- lw_bintf(td.mat) * gw_gfidf(td.mat)  # weighting: global frequency - inverse document frequency
+td.mat.lsa <- lw_bintf(td.mat) * gw_gfidf(td.mat)  # weighting: global frequency * inverse document frequency
 lsaSpace <- lsa(td.mat.lsa, dims = 10)  # create LSA space
 
 #######################################################################
 #3D scatter plot
 
 #get hover text of plot right (line breaks)
-br_max = 90#maximal number of characters before line break
+br_max = 60#maximal number of characters before line break
 
 for (i in 1:length(df$text)){#for each paragraph
   paragraph = df$text[i]
